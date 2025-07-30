@@ -17,9 +17,8 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "DATABASE_URL": "your_postgresql_connection_string"
+    "DATABASE_URL": "postgresql://neondb_owner:npg_cKFU5d0MuOrD@ep-cool-sun-adchse90.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require"
   },
   "installCommand": "cd client && npm install",
-  "buildCommand": "cd client && npm run build",
-  "outputDirectory": "client/dist"
+  "buildCommand": "cd client && npm run build"
 }
