@@ -1,0 +1,66 @@
+===============================
+VERCEL DEPLOYMENT FILES
+===============================
+
+FILE 1: vercel.json
+-------------------
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["dist/**"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/dist/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/public/$1"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "dist/index.js": {
+      "maxDuration": 30
+    }
+  },
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
+}
+
+FILE 2: .vercelignore
+---------------------
+node_modules
+.env
+.env.local
+*.log
+.replit
+replit.nix
+
+ENVIRONMENT VARIABLES FOR VERCEL:
+----------------------------------
+DATABASE_URL=your_postgresql_connection_string
+NODE_ENV=production
+
+DEPLOYMENT STEPS:
+-----------------
+1. Create new folder on your computer
+2. Copy ALL your project files from Replit to this folder
+3. Add the vercel.json file above
+4. Add the .vercelignore file above  
+5. Go to vercel.com → New Project
+6. Upload the folder
+7. Add DATABASE_URL environment variable
+8. Deploy
+9. Add custom domain waitingforlocks.com
+
+===============================

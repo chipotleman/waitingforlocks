@@ -1,0 +1,45 @@
+LOCKS SOLD - VERCEL EXPORT INSTRUCTIONS
+
+FILES TO DOWNLOAD/EXPORT:
+========================
+
+REQUIRED FILES:
+- All files in /client folder
+- All files in /server folder  
+- All files in /shared folder
+- package.json
+- package-lock.json
+- vercel.json (created for you)
+- .vercelignore (created for you)
+- tsconfig.json
+- vite.config.ts
+- tailwind.config.ts
+- postcss.config.js
+- components.json
+- drizzle.config.ts
+
+OPTIONAL FILES:
+- README-VERCEL-DEPLOYMENT.md (deployment guide)
+- replit.md (project documentation)
+
+FILES TO EXCLUDE:
+- .replit
+- replit.nix
+- .gitignore (will be replaced by .vercelignore)
+- Any .env files
+
+ENVIRONMENT VARIABLES FOR VERCEL:
+===============================
+DATABASE_URL=your_postgresql_connection_string
+NODE_ENV=production
+
+DEPLOYMENT STEPS:
+================
+1. Download all required files
+2. Upload to Vercel or connect via Git
+3. Add environment variables
+4. Deploy
+5. Add custom domain waitingforlocks.com
+6. Ready for your 2pm sale!
+
+Your queue system will work exactly the same on Vercel with full custom domain support.
