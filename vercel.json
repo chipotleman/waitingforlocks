@@ -1,24 +1,16 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "client/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "client/dist"
-      }
-    }
-  ],
+  "buildCommand": "cd client && npm install && npm run build",
+  "installCommand": "cd client && npm install",
+  "outputDirectory": "client/dist",
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/client/dist/index.html"
+      "dest": "/index.html"
     }
   ],
   "env": {
     "NODE_ENV": "production",
     "DATABASE_URL": "postgresql://neondb_owner:npg_cKFU5d0MuOrD@ep-cool-sun-adchse90.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require"
-  },
-  "installCommand": "cd client && npm install",
-  "buildCommand": "cd client && npm run build"
+  }
 }
